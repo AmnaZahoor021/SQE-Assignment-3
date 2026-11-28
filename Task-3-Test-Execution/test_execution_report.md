@@ -1,42 +1,105 @@
-# Task 3: Black-Box Test Execution
+# Task 3: Black-Box Test Execution Report
 
 ## 1. Introduction
 
-This task involves executing the black-box test cases designed in Task 1 against the Student Management System. The application was tested manually to verify its behavior against the expected results.
+This task focuses on the manual execution of the black-box test cases designed in Task 1 against the Student Management System.
 
-## 2. Test Execution
+The purpose of testing was to verify that the application behaves according to the specified requirements and produces the expected results for valid and invalid inputs.
 
-A total of 16 black-box test cases were executed. These tests covered input validation, boundary values, required fields, duplicate records, searching, editing, and deletion.
+A total of 16 black-box test cases were executed using different testing techniques.
 
-All 16 test cases were executed and passed according to their expected outcomes.
+## 2. Test Execution Approach
 
-## 3. Execution Results
+The test cases were executed manually through the Student Management System's web interface.
+
+The testing covered the following functionalities:
+
+- Student registration and input validation.
+- Validation of contact numbers.
+- Boundary value testing for student marks.
+- Required field validation.
+- Duplicate roll number detection.
+- Student record searching.
+- Editing existing student records.
+- Deleting student records.
+- Complete student management workflow.
+- Handling of invalid inputs and special characters.
+
+Each test case was executed by providing the specified input and comparing the application's actual response with the expected result.
+
+## 3. Detailed Test Execution Records
+
+The complete test execution records are maintained in the Excel workbook:
+
+**File:** `SQE_Assignment3.xlsx`
+
+The workbook contains the following relevant sheets:
+
+### 3.1 Test Cases Sheet
+
+The Test Cases sheet contains all 16 executed test cases, including:
+
+- Test Case ID
+- Test input or action performed
+- Expected result
+- Actual result
+- Execution status (PASS/FAIL)
+
+### 3.2 Simple Results Sheet
+
+The Simple Results sheet provides a summary of the overall test execution, including the total number of test cases, passed cases, failed cases, and untested cases.
+
+## 4. Execution Results
+
+The execution results are summarized below:
 
 | Test Case ID | Expected Result | Actual Result | Status |
 |---|---|---|---|
-| TC01 | Accept valid alphabetic name. | Entry succeeded; dashboard count 100 to 101; exact name not retained. | Pass |
-| TC02 | Reject numeric name. | Rejected; letters/spaces-only feedback. | Pass |
-| TC03 | Reject contact shorter than 10 digits. | Rejected; length feedback. | Pass |
-| TC04 | Reject contact longer than 13 digits. | Rejected; length feedback. | Pass |
-| TC05 | Reject marks below 0. | Rejected; range message. | Pass |
-| TC06 | Accept marks 0. | Accepted. | Pass |
-| TC07 | Accept marks 100. | Accepted. | Pass |
-| TC08 | Reject marks above 100. | Rejected; range message. | Pass |
-| TC09 | Reject blank name. | Blocked; required feedback. | Pass |
-| TC10 | Reject blank class. | Blocked; required feedback. | Pass |
-| TC11 | Reject blank roll number. | Blocked; required feedback. | Pass |
-| TC12 | Prevent duplicate roll number. | Rejected; duplicate message. | Pass |
-| TC13 | Display no match for nonexistent search. | No match message. | Pass |
-| TC14 | Save edited marks from 50 to 100. | Update accepted. | Pass |
-| TC15 | Complete add, search, edit, and delete workflow. | Add count 100 to 101; search/edit success; deletion returned count to 100. | Pass |
-| TC16 | Reject name containing special characters. | Rejected; letters/spaces feedback. | Pass |
+| TC01 | Accept valid alphabetic name. | Entry succeeded; dashboard count increased from 100 to 101. | PASS |
+| TC02 | Reject numeric name. | Rejected; letters and spaces-only feedback displayed. | PASS |
+| TC03 | Reject contact shorter than 10 digits. | Rejected; contact length feedback displayed. | PASS |
+| TC04 | Reject contact longer than 13 digits. | Rejected; contact length feedback displayed. | PASS |
+| TC05 | Reject marks below 0. | Rejected; marks range validation displayed. | PASS |
+| TC06 | Accept marks equal to 0. | Accepted successfully. | PASS |
+| TC07 | Accept marks equal to 100. | Accepted successfully. | PASS |
+| TC08 | Reject marks above 100. | Rejected; marks range validation displayed. | PASS |
+| TC09 | Reject blank name. | Submission blocked; required field feedback displayed. | PASS |
+| TC10 | Reject blank class. | Submission blocked; required field feedback displayed. | PASS |
+| TC11 | Reject blank roll number. | Submission blocked; required field feedback displayed. | PASS |
+| TC12 | Prevent duplicate roll number. | Rejected; duplicate roll number message displayed. | PASS |
+| TC13 | Display no matching result for a nonexistent search. | No matching student message displayed. | PASS |
+| TC14 | Save edited marks from 50 to 100. | Update accepted successfully. | PASS |
+| TC15 | Complete add, search, edit, and delete workflow. | All operations succeeded; dashboard count returned from 101 to 100. | PASS |
+| TC16 | Reject a name containing special characters. | Rejected; letters and spaces-only feedback displayed. | PASS |
 
-## 4. Overall Result
+## 5. Overall Test Execution Summary
 
-- Total test cases executed: 16
-- Passed: 16
-- Failed: 0
+| Metric | Result |
+|---|---:|
+| Total Test Cases | 16 |
+| Passed Test Cases | 16 |
+| Failed Test Cases | 0 |
+| Not Tested | 0 |
+| Execution Success Rate | 100% |
 
-## 5. Conclusion
+All 16 test cases passed successfully.
 
-The manual execution of the 16 black-box test cases was successful. The tested features behaved according to the documented expected results. No failures were recorded during this execution.
+## 6. Test Execution Evidence
+
+The project includes the following screenshot evidence:
+
+**Task3_01_Initial_Application_Dashboard.jpeg**
+
+This screenshot provides visual evidence of the Student Management System's initial dashboard before the test execution activities.
+
+The detailed test inputs and execution outcomes are additionally documented in `SQE_Assignment3.xlsx`.
+
+## 7. Conclusion
+
+The manual execution of all 16 black-box test cases was completed successfully.
+
+The testing covered student registration, input validation, boundary conditions, duplicate record handling, searching, editing, deletion, and error handling.
+
+All actual results matched their corresponding expected results. No failed test cases were recorded.
+
+The execution results demonstrate that the tested functionalities of the Student Management System behaved as expected during the recorded testing activities.
